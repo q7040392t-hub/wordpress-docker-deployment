@@ -1,0 +1,109 @@
+
+# ==========================================
+# WORDPRESS DOCKER - GITIGNORE
+# ==========================================
+
+# 1. PASSWORDS AND ENVIRONMENT
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+secrets/
+
+# 2. SSL PRIVATE KEYS
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Local SSL certificates
+nginx/certs/
+*.crt
+
+# 3. MYSQL DATABASE BACKUPS
+*.tar
+*.tar.gz
+*.tgz
+*.sql.gz
+*.sql.bak
+*.dump
+*.bak
+
+mysql-backup*
+mysql-before-reset*
+mysql_backup_before_reset/
+mysql_backup_bef*/
+mysql_backup*/
+
+# 4. MYSQL DATA FILES
+mysql_data/
+mysql-data/
+db_data/
+db-data/
+
+**/#innodb_redo/
+**/#innodb_temp/
+**/#ib_*
+**/ibdata*
+**/ib_logfile*
+**/undo_*
+**/mysql.sock
+**/auto.cnf
+**/*.ibd
+**/*.sdi
+**/*.dblwr
+
+# 5. RUNTIME DATA
+runtime/
+data/
+tmp/
+temp/
+
+# 6. DOCKER LOCAL FILES
+docker-compose.override.yml
+docker-compose.local.yml
+
+# 7. LOG FILES
+logs/
+*.log
+*.log.*
+
+# 8. WORDPRESS LOCAL FILES
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-config.php
+
+# 9. EDITOR FILES
+.vscode/
+.idea/
+*.code-workspace
+
+# 10. OPERATING SYSTEM FILES
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 11. TEMPORARY FILES
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# 12. BACKUP FOLDERS
+backup/
+backups/
+backup_*/
+backups_*/
+
+# ==========================================
+# KEEP IMPORTANT CONFIGURATION FILES
+# ==========================================
+!.gitignore
+!README.md
+!docker-compose.yml
+!nginx/default.conf
+!nginx/Dockerfile
+!prometheus/prometheus.yml
+!loki/config.yml
